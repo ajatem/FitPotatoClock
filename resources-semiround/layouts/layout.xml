@@ -1,0 +1,7 @@
+<layout id="WatchFace">
+    <bitmap id="FitPotatoLogo" x="center" y="top" filename="../drawables/fit-potato-logo.png" />
+    <label id="TimeLabel" x="center" y="30%" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_LT_GRAY" />
+    <label id="DateLabel" x="center" y="50%" font="Graphics.FONT_SMALL" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_LT_GRAY" />
+    <label id="MotivationLine1Label" x="center" y="70%" font="Graphics.FONT_SMALL" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_DK_GRAY" />
+    <label id="MotivationLine2Label" x="center" y="80%" font="Graphics.FONT_MEDIUM" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_DK_GRAY" />
+</layout>
