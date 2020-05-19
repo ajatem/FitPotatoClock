@@ -47,8 +47,14 @@ class FitPotatoClockView extends WatchUi.WatchFace {
         
         var motivationLabel2 = View.findDrawableById("MotivationLine2Label");
         motivationLabel2.setText(motivationLines[1]);
+
+        var batteryPercentageLabel = View.findDrawableById("BatteryPercentageLabel");
+        var clockStats = System.getSystemStats();
+        batteryPercentageLabel.setText(clockStats.battery.toNumber() + "%");
+
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
+        
     }
     
     function twelveHour(hour) {
