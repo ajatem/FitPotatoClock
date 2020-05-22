@@ -17,7 +17,7 @@ class FitPotatoClockView extends WatchUi.WatchFace {
 
     // Load your resources here
     function onLayout(dc) {
-        setLayout(Rez.Layouts.WatchFace(dc));
+        setLayout(Rez.Layouts.WatchFace(dc));      
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -50,7 +50,20 @@ class FitPotatoClockView extends WatchUi.WatchFace {
 
         var batteryPercentageLabel = View.findDrawableById("BatteryPercentageLabel");
         var clockStats = System.getSystemStats();
-        batteryPercentageLabel.setText(clockStats.battery.toNumber() + "%");
+        var batteryVal = clockStats.battery.toNumber();
+        batteryPercentageLabel.setText(batteryVal + "%");
+        
+        var batteryImage = View.findDrawableById("BatteryLogo");
+       
+        if (batteryVal >= 90) {
+           batteryImage.setBitmap(Rez.Drawables.BatteryLogoFull);
+        } 
+        else if (batteryVal >= 30) {
+           batteryImage.setBitmap(Rez.Drawables.BatteryLogoMid);
+        } 
+        else {
+           batteryImage.setBitmap(Rez.Drawables.BatteryLogoEmpty);
+        }
 
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);

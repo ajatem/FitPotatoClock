@@ -1,3 +1,6 @@
 <drawables>
     <bitmap id="LauncherIcon" filename="launcher_icon.png" />
+    <bitmap id="BatteryLogoMid" filename="../drawables/batteryIcon.png" />
+	<bitmap id="BatteryLogoFull" filename="../drawables/batteryIcon_full.png" />
+	<bitmap id="BatteryLogoEmpty" filename="../drawables/batteryIcon_empty.png" />
 </drawables>
